@@ -1,0 +1,876 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Mode Styles */
+.light-mode {
+    background-color: #F5F5F5; /* Light mode background */
+    color: #333; /* Dark gray text */
+}
+
+.light-mode h1, .light-mode h2, .light-mode h3 {
+    color: #333; /* Dark gray text for headings */
+}
+
+.light-mode p {
+    color: #555; /* Medium gray text */
+}
+
+.light-mode .team-member, .light-mode .project {
+    background-color: #FFFFFF; /* White background for team members/projects */
+    border: 1px solid #ccc;
+}
+
+.light-mode footer {
+    background-color: #f4f4f4; /* Light footer background */
+    color: #333; /* Dark text for footer */
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212; /* Dark mode background */
+    color: #fff; /* White text */
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3 {
+    color: #fff; /* White text for headings */
+}
+
+.dark-mode p {
+    color: #bbb; /* Lighter gray text */
+}
+
+.dark-mode .team-member, .dark-mode .project {
+    background-color: #1e1e1e; /* Dark background for team members/projects */
+    border: 1px solid #444; /* Darker border */
+}
+
+.dark-mode footer {
+    background-color: #222; /* Darker footer background */
+    color: #fff; /* White text for footer */
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 20px;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+/* Paragraphs */
+p {
+    line-height: 1.6;
+}
+
+/* Buttons */
+.toggle-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: white;
+}
+
+.cta-button {
+    background-color: #28A745; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.download-button, .join-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff; /* White text */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.download-button {
+    background-color: #008080; /* Teal green */
+}
+
+.download-button:hover {
+    transform: scale(1.05);
+    background-color: #00FFFF; /* Neon blue */
+}
+
+.join-button {
+    background-color: #1e00ff; /* Blue */
+}
+
+.join-button:hover {
+    transform: scale(1.05);
+    background-color: #000dff; /* Darker blue */
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+/* Social Links */
+.social-links a {
+    margin-right: 10px;
+    color: #00FFFF; /* Neon blue */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #fff; /* White on hover */
+}
+
+/* Team Section */
+#team {
+    padding: 40px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.team-member {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0. 3s, box-shadow 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Section */
+#projects {
+    padding: 40px;
+}
+
+.project {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member, .project {
+        width: 90%;
+    }
+} 
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Mode Styles */
+.light-mode {
+    background-color: #F5F5F5; /* Light mode background */
+    color: #333; /* Dark gray text */
+}
+
+.light-mode h1, .light-mode h2, .light-mode h3 {
+    color: #333; /* Dark gray text for headings */
+}
+
+.light-mode p {
+    color: #555; /* Medium gray text */
+}
+
+.light-mode .team-member, .light-mode .project {
+    background-color: #FFFFFF; /* White background for team members/projects */
+    border: 1px solid #ccc;
+}
+
+.light-mode footer {
+    background-color: #f4f4f4; /* Light footer background */
+    color: #333; /* Dark text for footer */
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212; /* Dark mode background */
+    color: #fff; /* White text */
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3 {
+    color: #fff; /* White text for headings */
+}
+
+.dark-mode p {
+    color: #bbb; /* Lighter gray text */
+}
+
+.dark-mode .team-member, .dark-mode .project {
+    background-color: #1e1e1e; /* Dark background for team members/projects */
+    border: 1px solid #444; /* Darker border */
+}
+
+.dark-mode footer {
+    background-color: #222; /* Darker footer background */
+    color: #fff; /* White text for footer */
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 20px;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+/* Paragraphs */
+p {
+    line-height: 1.6;
+}
+
+/* Buttons */
+.toggle-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: white;
+}
+
+.cta-button {
+    background-color: #28A745; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.download-button, .join-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff; /* White text */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.download-button {
+    background-color: #008080; /* Teal green */
+}
+
+.download-button:hover {
+    transform: scale(1.05);
+    background-color: #00FFFF; /* Neon blue */
+}
+
+.join-button {
+    background-color: #1e00ff; /* Blue */
+}
+
+.join-button:hover {
+    transform: scale(1.05);
+    background-color: #000dff; /* Darker blue */
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+/* Social Links */
+.social-links a {
+    margin-right: 10px;
+    color: #00FFFF; /* Neon blue */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #fff; /* White on hover */
+}
+
+/* Team Section */
+#team {
+    padding: 40px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.team-member {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Section */
+#projects {
+    padding: 40px;
+}
+
+.project {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member, .project {
+        width: 90%;
+    }
+} 
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Mode Styles */
+.light-mode {
+    background-color: #F5F5F5; /* Light mode background */
+    color: #333; /* Dark gray text */
+}
+
+.light-mode h1, .light-mode h2, .light-mode h3 {
+    color: #333; /* Dark gray text for headings */
+}
+
+.light-mode p {
+    color: #555; /* Medium gray text */
+}
+
+.light-mode .team-member, .light-mode .project {
+    background-color: #FFFFFF; /* White background for team members/projects */
+    border: 1px solid #ccc;
+}
+
+.light-mode footer {
+    background-color: #f4f4f4; /* Light footer background */
+    color: #333; /* Dark text for footer */
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212; /* Dark mode background */
+    color: #fff; /* White text */
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3 {
+    color: #fff; /* White text for headings */
+}
+
+.dark-mode p {
+    color: #bbb; /* Lighter gray text */
+}
+
+.dark-mode .team-member, .dark-mode .project {
+    background-color: #1e1e1e; /* Dark background for team members/projects */
+    border: 1px solid #444; /* Darker border */
+}
+
+.dark-mode footer {
+    background-color: #222; /* Darker footer background */
+    color: #fff; /* White text for footer */
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 20px;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+/* Paragraphs */
+p {
+    line-height: 1.6;
+}
+
+/* Buttons */
+.toggle-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: white;
+}
+
+.cta-button {
+    background-color: #28A745; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.download-button, .join-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff; /* White text */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.download-button {
+    background-color: #008080; /* Teal green */
+}
+
+.download-button:hover {
+    transform: scale(1.05);
+    background-color: #00FFFF; /* Neon blue */
+}
+
+.join-button {
+    background-color: #1e00ff; /* Blue */
+}
+
+.join-button:hover {
+    transform: scale(1.05);
+    background-color: #000dff; /* Darker blue */
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+/* Social Links */
+.social-links a {
+    margin-right: 10px;
+    color: #00FFFF; /* Neon blue */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #fff; /* White on hover */
+}
+
+/* Team Section */
+#team {
+    padding: 40px;
+}
+.team-container {
+    display: flex;
+ justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.team-member {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Section */
+#projects {
+    padding: 40px;
+}
+
+.project {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member, .project {
+        width: 90%;
+    }
+}
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Mode Header */
+.light-mode header {
+    background-color: #ffffff; /* Light background */
+    color: #333; /* Dark text */
+}
+
+/* Dark Mode Header */
+.dark-mode header {
+    background-color: #1e1e1e; /* Dark background */
+    color: #ffffff; /* Light text */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from header */
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007BFF; /* Change color on hover */
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Mode Footer */
+.light-mode footer {
+    background-color: #f4f4f4; /* Light footer background */
+    color: #333; /* Dark text for footer */
+}
+
+/* Dark Mode Footer */
+.dark-mode footer {
+    background-color: #222; /* Darker footer background */
+    color: #ffffff; /* Light text for footer */
+}
+
+/* Footer Sections */
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    margin-bottom: 5px;
+}
+
+/* Social Links in Footer */
+.footer-section .social-links a {
+    margin-right: 10px;
+    color: inherit; /* Inherit color from footer */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section .social-links a:hover {
+    color: #00FFFF; /* Neon blue on hover */
+}
+/* Project Section Styles */
+.project {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Link Styles */
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #007BFF; /* Blue color for link */
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.project-link i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+/* Hover Effect for Project Links */
+.project-link:hover {
+    background-color: rgba(0, 123, 255, 0.1); /* Light blue background on hover */
+    color: #0056b3; /* Darker blue text on hover */
+    border: 1px solid #007BFF; /* Blue border on hover */
+}
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Mode Footer */
+.light-mode footer {
+    background-color: #f4f4f4; /* Light footer background */
+    color: #333; /* Dark text for footer */
+}
+
+/* Dark Mode Footer */
+.dark-mode footer {
+    background-color: #222; /* Darker footer background */
+    color: #ffffff; /* Light text for footer */
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+}
+
+/* Footer Sections */
+.footer-section {
+    margin-bottom: 20px;
+    flex: 1; /* Allow sections to grow equally */
+    min-width: 200px; /* Ensures sections don't get too narrow */
+    max-width: 300px; /* Prevents sections from becoming too wide */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack sections vertically on small screens */
+        align-items: center; /* Center align sections */
+    }
+    
+    .footer-section {
+        text-align: center; /* Center text for smaller screens */
+        margin: 10px 0; /* Add some margin between stacked sections */
+    }
+}
+
+/* Social Links in Footer */
+.social-links {
+    display: flex;
+    gap: 10px; /* Space between icons */
+}
+
+.social-links a {
+    color: inherit; /* Inherit color from footer */
+    text-decoration: none;
+    font-size: 1.5em; /* Icon size */
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #007BFF; /* Change color on hover */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+* {
+    box-sizing: border-box; /* Ensures padding and borders are included in element's total width and height */
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Use a readable font */
+    line-height: 1.6; /* Improve text readability */
+}
+
+/* Container to hold all content */
+.container {
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Optional: limit max width for larger screens */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add some padding */
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: space-between; /* Space between sections */
+}
+
+/* Footer Sections */
+.footer-section {
+    flex: 1; /* Allow sections to grow equally */
+    min-width: 200px; /* Prevent sections from becoming too narrow */
+    max-width: 300px; /* Prevent sections from becoming too wide */
+    margin: 10px; /* Add margin between sections */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center align sections */
+    }
+    
+    .footer-section {
+        text-align: center; /* Center text for smaller screens */
+        margin: 10px 0; /* Add some margin between stacked sections */
+    }
+}
